@@ -1,0 +1,41 @@
+<h2>Delay execute functions</h2>
+
+<div>
+  <h4>immediate invoke</h4>
+  <input #inputImmediate type="text" placeholder="Start typing">
+  <button #btnImmediate>Click me</button>
+</div>
+
+<div>
+  <h4>debounce invoke</h4>
+  <input #inputDebounce type="text" placeholder="Start typing">
+  <button #btnDebounce>Click me</button>
+</div>
+
+<div>
+  <h4>throttle invoke</h4>
+  <input #inputThrottle type="text" placeholder="Start typing">
+  <button #btnThrottle>Click me</button>
+</div>
+
+<div>
+  <h4>audit invoke</h4>
+  <input #inputAudit type="text" placeholder="Start typing">
+  <button #btnAudit>Click me</button>
+</div>
+
+<div>
+  <h4>sample invoke</h4>
+  <input #inputSample type="text" placeholder="Start typing">
+  <button #btnSample>Click me</button>
+</div>
+
+<div>
+  <h4>buffer invoke (check console)</h4>
+  <input #inputBuffer type="text" placeholder="Start typing">
+  <button #btnBuffer>Click me</button>
+</div>
+
+<ul>
+  <li *ngFor="let action of actions">[{{action.type}}] {{action.date | date: 'hh:mm:SS'}} - {{action.value}}</li>
+</ul>
