@@ -1,0 +1,17 @@
+<h2>Subjects</h2>
+
+<div>
+  <input #inputEl type="text" placeholder="Start typing">
+  <button #btnEl>Click me</button>
+  <br>
+  <button (click)="exist = !exist">Hide/Show Results</button>
+  <br>
+  <button (click)="aS$.complete()">Complete AsyncSubject</button>
+</div>
+
+<div *ngIf="exist">
+  <p>Subject value: {{s$ | async}}</p>
+  <p>BeheviorSubject value: {{bS$ | async}}</p>
+  <p>ReplaySubject value: {{rS$ | async}}</p>
+  <p>AsyncSubject value: {{aS$ | async}}</p>
+</div>
